@@ -47,10 +47,10 @@ sub redir
 {
   if(shift)
   {
-    print redirect("/registration?q=SUCCESS");
+    print redirect("/registration/confirm?q=SUCCESS");
   }
   else
   {
-    print redirect("/registration?q=ERROR");
+    print redirect("/registration/confirm?q=ERROR");
   }
 }

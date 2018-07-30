@@ -7,10 +7,6 @@ use CGI qw/url_param/;
 use LWP::Simple;
 
 my $states = get('https://marketplace.herculeze.com/cgi-bin/getStates.cgi');
-my $q = url_param('q');
-my $msg = $q eq "ERROR"   ? "There was an error creating the user" : 
-          $q eq "SUCCESS" ? "User created":
-          "";
 
 print<<END;
 Content-type:text/html
@@ -26,8 +22,6 @@ Content-type:text/html
   </head>
 
   <body>
-    <p>$msg</p>
-
     <form id='form' action='/cgi-bin/processForm.cgi' method='POST' onsubmit='validate()'>
             <label for='fName'>First Name: <input name='fName' id='fName' required></label><br />
             <label for='lName'>Last Name: <input name='lName' id='fName' required></label><br />
