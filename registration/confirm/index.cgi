@@ -4,9 +4,7 @@ use strict;
 use warnings;
 
 use CGI qw/url_param/;
-use LWP::Simple;
 
-my $states = get('https://marketplace.herculeze.com/cgi-bin/getStates.cgi');
 my $q = url_param('q');
 my $msg = $q eq "ERROR"   ? "There was an error creating the user" : 
           $q eq "SUCCESS" ? "User created":
