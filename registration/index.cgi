@@ -3,7 +3,6 @@
 use strict;
 use warnings;
 
-use CGI qw/url_param/;
 use LWP::Simple;
 
 my $states = get('https://marketplace.herculeze.com/cgi-bin/getStates.cgi');
