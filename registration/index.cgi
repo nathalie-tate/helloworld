@@ -21,7 +21,7 @@ Content-type:text/html
   </head>
 
   <body>
-    <form id='form' action='/cgi-bin/processForm.cgi' method='POST' onsubmit='validate()'>
+    <form id='form' action='/cgi-bin/processForm.cgi' method='POST'>
             <label for='fName'>First Name: <input name='fName' id='fName' required></label><br />
             <label for='lName'>Last Name: <input name='lName' id='fName' required></label><br />
             <label for='addr1'>Address Line One: <input name='addr1' id='addr1' required></label><br />
